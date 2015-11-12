@@ -1,0 +1,13 @@
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\Bin\Release\ApplicationIcon.png
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\Bin\Release\Background.png
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\Bin\Release\PPTLS.dll
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\Bin\Release\PPTLS.pdb
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\Bin\Release\AppManifest.xaml
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\Bin\Release\PPTLS.xap
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\obj\Release\ResolveAssemblyReference.cache
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\obj\Release\App.g.i.cs
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\obj\Release\MainPage.g.i.cs
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\obj\Release\PPTLS.g.resources
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\obj\Release\PPTLS.dll
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\obj\Release\PPTLS.pdb
+c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\obj\Release\XapCacheFile.xml
