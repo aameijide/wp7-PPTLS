@@ -1,8 +1,14 @@
-﻿<xapCache source="c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\Bin\Release\PPTLS.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="10/04/2012 3:29:32">
-  <file source="c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\Bin\Release\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="10/04/2012 3:18:04" />
-  <file source="c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\Background.png" archivePath="Background.png" lastWriteTime="10/04/2012 3:27:05" />
-  <file source="c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="10/04/2012 3:27:40" />
-  <file source="c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\obj\Release\PPTLS.dll" archivePath="PPTLS.dll" lastWriteTime="10/04/2012 3:29:31" />
-  <file source="c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="10/04/2012 2:36:19" />
-  <file source="c:\users\adri-w7\documents\visual studio 2010\Projects\PPTLS\PPTLS\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="10/04/2012 3:18:04" />
+﻿<xapCache source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\Bin\Release\PPTLS.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="02/10/2012 10:59:27">
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\Bin\Release\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="10/07/2012 22:58:30" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\Background.png" archivePath="Background.png" lastWriteTime="10/04/2012 03:27:05" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="10/04/2012 03:27:40" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\obj\Release\PPTLS.dll" archivePath="PPTLS.dll" lastWriteTime="02/10/2012 10:59:25" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\obj\Release\de-DE\PPTLS.resources.dll" archivePath="de-DE\PPTLS.resources.dll" lastWriteTime="02/10/2012 10:59:25" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\obj\Release\en-GB\PPTLS.resources.dll" archivePath="en-GB\PPTLS.resources.dll" lastWriteTime="02/10/2012 10:59:26" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\obj\Release\es-ES\PPTLS.resources.dll" archivePath="es-ES\PPTLS.resources.dll" lastWriteTime="02/10/2012 10:59:26" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\obj\Release\fr-FR\PPTLS.resources.dll" archivePath="fr-FR\PPTLS.resources.dll" lastWriteTime="02/10/2012 10:59:26" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\Images\appbar.send.text.rest.png" archivePath="Images\appbar.send.text.rest.png" lastWriteTime="14/07/2012 18:51:46" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\Images\i.png" archivePath="Images\i.png" lastWriteTime="14/07/2012 18:53:56" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="10/04/2012 02:36:19" />
+  <file source="D:\Visual Studio 2010\Projects\PPTLS\PPTLS\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="13/07/2012 14:01:11" />
 </xapCache>

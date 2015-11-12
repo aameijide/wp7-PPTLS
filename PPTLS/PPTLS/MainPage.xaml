@@ -6,11 +6,12 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
+    xmlns:local="clr-namespace:PPTLS"
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
@@ -19,34 +20,72 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
+<!--http://forums.create.msdn.com/forums/p/87002/522440.aspx-->
         <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="Pedra, paper, tisora, llangardaix, spock" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="Fes una jugada" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="ApplicationTitle" Text="{Binding Path=Localizedresources.titol, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="PPTLS" TextWrapping="Wrap" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel. Colocar aquí el contenido adicional-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ToggleButton Name="pedra" Content="Pedra" VerticalAlignment="Top" HorizontalAlignment="Left" Checked="pedra_Checked"></ToggleButton>
-            <ToggleButton Name="paper" Content="Paper" VerticalAlignment="Top" HorizontalAlignment="Center" Checked="paper_Checked"></ToggleButton>
-            <ToggleButton Name="tisora" Content="Tisora" VerticalAlignment="Top" HorizontalAlignment="Right" Checked="tisora_Checked"></ToggleButton>
-            <ToggleButton Name="llangardaix" Content="Llangardaix" VerticalAlignment="Center" HorizontalAlignment="Left" Checked="llangardaix_Checked"></ToggleButton>
-            <ToggleButton Name="spock" Content="Spock" VerticalAlignment="Center" HorizontalAlignment="Right" Checked="spock_Checked"></ToggleButton>
-            <TextBlock Name="resultat" Text="La imatge original és CC de WIkipedia" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Name="cap" Text="{Binding Path=Localizedresources.titol, Source={StaticResource LocalizedStrings}}" FontSize="32" ></TextBlock>
+            <Button Name="pedra_button" Margin="15,53,0,0" Click="pedra_Click" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <StackPanel>
+                    <Image Source="Images\pedra.png" Stretch="Uniform" Height="100" Width="100" />
+                    <TextBlock Name="pedra" Text="{Binding Path=Localizedresources.pedra, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" TextAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="paper_button" Margin="15,53,0,0" Click="paper_Click" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <StackPanel>
+                    <Image Source="Images\paper.png" Stretch="Uniform" Height="100" Width="100" />
+                    <TextBlock Name="paper" Text="{Binding Path=Localizedresources.paper, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" TextAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="tisora_button" Margin="15,53,0,0" Click="tisora_Click" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <StackPanel>
+                    <Image Source="Images\tisora.png" Stretch="Uniform" Height="100" Width="100" />
+                    <TextBlock Name="tisora" Text="{Binding Path=Localizedresources.tisora, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" TextAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="llangardaix_button" Margin="15,53,0,0" Click="llangardaix_Click" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <StackPanel>
+                    <Image Source="Images\llangardaix.png" Stretch="Uniform" Height="100" Width="100" />
+                    <TextBlock Name="llangardaix" Text="{Binding Path=Localizedresources.llangardaix, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" TextAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="spock_button" Margin="15,53,0,0" Click="spock_Click" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <StackPanel>
+                    <Image Source="Images\spock.png" Stretch="Uniform" Height="100" Width="100" />
+                    <TextBlock Name="spock" Text="{Binding Path=Localizedresources.spock, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" TextAlignment="Center" />
+                </StackPanel>
+            </Button>
+            
+            <TextBlock Name="resultat" Text="{Binding Path=Localizedresources.resultat, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="186,226,160,175" TextWrapping="Wrap" Height="134"></TextBlock>
+            <TextBlock Name="marcador" Text="{Binding Path=Localizedresources.marcador, Source={StaticResource LocalizedStrings}}" Margin="23,386,25,31" FontSize="28"/>
+            <TextBlock Name="marcadorWP" Text="{Binding}" Margin="186,463,215,31" FontSize="28"/>
+            <TextBlock Name="marcadorTU" Text="{Binding}" Margin="186,419,215,78" FontSize="28"/>
+            <ListBox Visibility="Collapsed" Height="155" HorizontalAlignment="Left" Margin="40,71,0,0" Name="LangList" VerticalAlignment="Top" Width="276" SelectedIndex="-1" SelectionChanged="Lang_SelectionChanged">
+                <ListBoxItem Content="Català"></ListBoxItem>
+                <ListBoxItem Content="Español"></ListBoxItem>
+                <ListBoxItem Content="English"></ListBoxItem>
+                <ListBoxItem Content="Français"></ListBoxItem>
+                <ListBoxItem Content="Deutsche"></ListBoxItem>
+            </ListBox>
+            <Button Name="tornar" Content="{Binding Path=Localizedresources.tornar, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Visibility="Collapsed" Click="idioma_Click" ></Button>
         </Grid>
     </Grid>
  
     <!--Código de ejemplo que muestra el uso de ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
+    <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Botón 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Botón 2"/>
+            <shell:ApplicationBarIconButton IconUri="Images/appbar.send.text.rest.png" Text="idioma1" Click="idioma_Click"/>
+            <shell:ApplicationBarIconButton IconUri="Images/i.png" Text="sobre2" Click="sobre_Click"/>
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="Elemento de menú 1"/>
-                <shell:ApplicationBarMenuItem Text="Elemento de menú 2"/>
+                <shell:ApplicationBarMenuItem Text="idioma2" Click="idioma_Click"/>
+                <shell:ApplicationBarMenuItem Text="sobre2" Click="sobre_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

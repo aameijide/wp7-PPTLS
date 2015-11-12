@@ -41,7 +41,7 @@ namespace PPTLS
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 // Mostrar los contadores de velocidad de marcos actual.
-                Application.Current.Host.Settings.EnableFrameRateCounter = true;
+                Application.Current.Host.Settings.EnableFrameRateCounter = false;
 
                 // Mostrar las áreas de la aplicación que se están volviendo a dibujar en cada marco.
                 //Application.Current.Host.Settings.EnableRedrawRegions = true;
